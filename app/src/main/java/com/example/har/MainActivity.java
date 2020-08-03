@@ -1,9 +1,7 @@
 package com.example.har;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import com.example.har.ui.login.LoginActivity;
 
 import java.util.TimerTask;

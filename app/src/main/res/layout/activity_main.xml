@@ -7,4 +7,5 @@
     android:background="@drawable/bgradient"
     tools:context=".MainActivity"
     >
+
 </androidx.constraintlayout.widget.ConstraintLayout>
