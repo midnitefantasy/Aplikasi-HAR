@@ -5,15 +5,12 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -25,10 +22,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.har.MainActivity;
 import com.example.har.R;
-import com.example.har.ui.login.LoginViewModel;
-import com.example.har.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -41,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
-        final EditText usernameEditText = findViewById(R.id.username);
+        final EditText usernameEditText = findViewById(R.id.nama);
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
@@ -113,14 +107,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
+        //loginButton.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View v) {
+        //        loadingProgressBar.setVisibility(View.VISIBLE);
+        //        loginViewModel.login(usernameEditText.getText().toString(),
+        //                passwordEditText.getText().toString());
 
-                    AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create(); //Read Update
+/*                    AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create(); //Read Update
                     alertDialog.setTitle("s");
                     alertDialog.setMessage("salah password");
 
@@ -133,11 +127,8 @@ public class LoginActivity extends AppCompatActivity {
                                                           alertDialog.dismiss();
                                                       }
                                                   }
-                                              }, 5000};
-            )}
-
+                                              }, 5000};*/
             }
-    );
 
 
     private void updateUiWithUser(LoggedInUserView model) {

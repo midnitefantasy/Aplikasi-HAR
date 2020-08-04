@@ -11,5 +11,10 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="sign_up">Sign Up</string>
-    <string name="user">User</string>
+    <string name="user">User</string>\
+    <string-array name ="jk">
+        <item>Perempuan</item>
+        <item>Laki-laki</item>
+    </string-array>
+    <string name="pref_file">com.ab</string>
 </resources>
