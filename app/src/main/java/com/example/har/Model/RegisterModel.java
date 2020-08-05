@@ -1,8 +1,9 @@
 package com.example.har.Model;
 
-public class DataModel {
+
+public class RegisterModel {
     private String nama, email, password, jk;
-    private int umur, tb, bb;
+    private int umur, tb, bb, isSuccess;
 
     public String getNama() {
         return nama;
@@ -59,4 +60,24 @@ public class DataModel {
     public void setBb(int bb) {
         this.bb = bb;
     }
+
+    public int getIsSuccess() {
+        return isSuccess;
+    }
+
+    public void setIsSuccess(int isSuccess) {
+        this.isSuccess = isSuccess;
+    }
+
+    public RegisterModel (String nama, String email, String password, int umur, String jk, int tb, int bb) {
+        this.nama = nama;
+        this.email = email;
+        this.password = password;
+        this.jk = jk;
+        this.tb = tb;
+        this.bb = bb;
+        this.isSuccess = isSuccess;
+
+    }
+
 }

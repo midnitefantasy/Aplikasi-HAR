@@ -1,4 +1,4 @@
-package com.example.har.Adapter;
+/*package com.example.har.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.har.Model.DataModel;
+import com.example.har.Model.RegisterModel;
 import com.example.har.R;
 
 import java.util.List;
@@ -16,8 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
     private Context ctx;
-    private List<DataModel> listUser;
-    public AdapterData(Context ctx, List<DataModel> listUser){
+    private List<RegisterModel> listUser;
+    public AdapterData(Context ctx, List<RegisterModel> listUser){
         this.ctx = ctx;
         this.listUser = listUser;
     }
@@ -25,7 +25,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
     @NonNull
     @Override
     public HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_item, parent, att)
+        View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_item, parent, att);
         return null;
     }
 
@@ -51,4 +51,4 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
             }
         }
     }
-}
+}*/

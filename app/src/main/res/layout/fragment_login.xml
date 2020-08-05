@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgradient"
@@ -10,10 +8,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".LoginFragment">
+
+    <!-- TODO: Update blank fragment layout -->
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/login"
         android:layout_width="328dp"
         android:layout_height="50dp"
         android:layout_gravity="start"
@@ -24,11 +24,7 @@
         android:fontFamily="@font/ralewayregular"
         android:text="@string/action_log_in_short"
         android:textColor="@color/darkgrey"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="15dp" />
 
     <EditText
         android:id="@+id/email"
@@ -45,11 +41,7 @@
         android:selectAllOnFocus="true"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="13dp" />
 
     <EditText
         android:id="@+id/password"
@@ -69,12 +61,7 @@
         android:textColorHint="@color/white"
         android:textSize="13dp"
         android:fontFamily="sans-serif"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.696"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        />
 
     <ProgressBar
         android:id="@+id/loading"
@@ -85,12 +72,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="64dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -100,12 +82,7 @@
         android:layout_marginStart="113dp"
         android:layout_marginTop="571dp"
         android:text="Tidak Punya Akun?  "
-        android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/SignUp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="13dp"/>
 
     <TextView
         android:id="@+id/SignUp"
@@ -118,11 +95,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/sign_up"
         android:textColor="@color/white"
-        android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="13dp"/>
 
     <TextView
         android:id="@+id/textView"
@@ -133,11 +106,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="Lupa Password?"
         android:textColor="@color/white"
-        android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="13dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
