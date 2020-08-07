@@ -17,7 +17,7 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         nama = findViewById(R.id.nama);
         if (!PrefConfig.getInstance(this).isLoggedIn()){
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             finish();
         }
         String loggedNama = PrefConfig.getInstance(this).LoggedInUser();

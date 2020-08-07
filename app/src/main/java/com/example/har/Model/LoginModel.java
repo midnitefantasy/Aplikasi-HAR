@@ -76,10 +76,11 @@ public class LoginModel {
         this.isSuccess = isSuccess;
     }
 
-    public LoginModel (String email, String password) {
+    public LoginModel (String nama, String email, String password, int umur, String jk, int tb, int bb, int isSuccess, String message) {
         this.nama = nama;
         this.email = email;
         this.password = password;
+        this.umur = umur;
         this.jk = jk;
         this.tb = tb;
         this.bb = bb;

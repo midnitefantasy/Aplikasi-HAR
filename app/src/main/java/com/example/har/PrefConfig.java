@@ -5,44 +5,15 @@ import android.content.SharedPreferences;
 import android.content.Intent;
 import android.widget.Toast;
 
+import com.example.har.ui.login.LoginActivity;
+
 public class PrefConfig {
-    private SharedPreferences sharedPref;
- //   private Context context;
 
-    /*public PrefConfig(Context context){
-        this.context = context;
-        sharedPreferences = context.getSharedPreferences (context.getString(R.string.pref_file), Context.MODE_PRIVATE);
-    }
-
-    public void writeLoginStatus (boolean status){
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(context.getString(R.string.pref_login_status), status);
-        editor.commit();
-    }
-
-    public boolean readLoginStatus(){
-        return sharedPreferences.getBoolean(context.getString(R.string.pref_login_status), false);
-    }
-
-    public void writeName(String name){
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(context.getString(R.string.pref_user_name),name);
-        editor.commit();
-    }
-    public String readName(){
-        return sharedPreferences.getString(context.getString(R.string.pref_user_name), "User");
-    }
-
-    public void displayToast(String message){
-        Toast.makeText(context,message,Toast.LENGTH_SHORT).show();
-    }
-
-}*/
-    //Storage File
-    public static final String SHARED_PREF_NAME = "prefLogin";
+    public static final String SHARED_PREF_NAME = "example";
 
     //Username
-    public static final String email = "email";
+    public static final String cEmail = "email";
+    public static final String cNama = "nama";
 
     public static PrefConfig mInstance;
 
@@ -63,25 +34,27 @@ public class PrefConfig {
 
 
     //method to store user data
-    public void storeNama(String nama) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+    public void storeEmail(String email) {
+        SharedPreferences sharedPreferences = this.context
+                .getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(nama, email);
+        editor.putString(cEmail, email);
         editor.commit();
     }
 
     //check if user is logged in
     public boolean isLoggedIn() {
-        SharedPreferences sharedPreferences = context
+        SharedPreferences sharedPreferences = this.context
                 .getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString(email, null) != null;
+        return sharedPreferences.getString(cEmail, null) != null;
     }
 
 
     //find logged in user
     public String LoggedInUser() {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString(email, null);
+        SharedPreferences sharedPreferences = this.context
+                .getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(cEmail, null);
 
     }
 
@@ -92,7 +65,7 @@ public class PrefConfig {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.commit();
-        context.startActivity(new Intent(context, MainActivity.class));
+        this.context.startActivity(new Intent(this.context, LoginActivity.class));
     }
 
 }
