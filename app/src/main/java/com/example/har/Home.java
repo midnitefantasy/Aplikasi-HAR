@@ -7,21 +7,27 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.example.har.ui.login.LoginActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Home extends AppCompatActivity {
     TextView nama;
-
+    private FirebaseAuth mAuth;
+   // @Override
+    //public onStart(){
+     //   super.onStart();
+      //  FirebaseUser currentUser = mAuth.getCurrentUser();
+      //  if(!FirebaseUser currentUser.isEmailVerified()){
+      //      startActivity(new Intent(this, MainActivity.class));
+      //      finish();
+      //  }
+   // }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        nama = findViewById(R.id.nama);
-        if (!PrefConfig.getInstance(this).isLoggedIn()){
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-        }
-        String loggedNama = PrefConfig.getInstance(this).LoggedInUser();
-        nama.setText(loggedNama);
+        //String loggedNama = PrefConfig.getInstance(this).LoggedInUser();
+        //nama.setText(loggedNama);
     }
 
     /*public static PrefConfig prefConfig;

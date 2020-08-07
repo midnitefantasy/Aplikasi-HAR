@@ -17,7 +17,7 @@ public class signup extends AppCompatActivity implements AdapterView.OnItemSelec
         setContentView(R.layout.activity_signup);
         Spinner spin = (Spinner) findViewById(R.id.jeniskelamin);
         spin.setOnItemSelectedListener(this);
-        String[] jk = {"Laki-laki", "Perempuan"};
+        String[] jk = {"Pilih", "Laki-laki", "Perempuan"};
         ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item,jk);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(aa);
@@ -25,7 +25,7 @@ public class signup extends AppCompatActivity implements AdapterView.OnItemSelec
 
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String item = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), "Selected : " + item, Toast.LENGTH_LONG).show();
+        //Toast.makeText(parent.getContext(), "Selected : " + item, Toast.LENGTH_LONG).show();
     }
     public void onNothingSelected(AdapterView<?> arg0){
     }

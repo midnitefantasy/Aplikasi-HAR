@@ -18,7 +18,12 @@ import com.example.har.Model.LoginModel;
 import com.example.har.PrefConfig;
 import com.example.har.R;
 import com.example.har.signup;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -27,16 +32,14 @@ import retrofit2.Response;
 import static android.Manifest.permission.READ_CONTACTS;
 
 public class LoginActivity extends AppCompatActivity {
-   // private static final int REQUEST_READ_CONTACTS = 0;
 
-    //private static final String[] DUMMY_CREDENTIALS = new String[]{
-    //        "foo@example.com:hello", "bar@example.com:world"
-    //};
+    private FirebaseAuth mAuth;
 
     EditText mPassword, mEmail;
     TextView btnSignUp;
     Button btnLogin;
-    final String loginURL = "http://192.168.100.21/HAR/login.php";
+    //final String loginURL = "http://192.168.100.21/HAR/login.php";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,8 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setClickable(true);
         btnSignUp.setClickable(true);
         btnLogin.setEnabled(true);
+        mAuth = FirebaseAuth.getInstance();
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +73,21 @@ public class LoginActivity extends AppCompatActivity {
                     mPassword.requestFocus();
                     return;
                 }
-                loginUser(email, password);
+
+                //authenticate the uer
+                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                           Toast.makeText(getApplicationContext(), "User successfully login", Toast.LENGTH_SHORT).show();
+                           Intent intent = new Intent(getApplicationContext(), Home.class);
+                           startActivity(intent);
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Email/Password salah", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+                //loginUser(email, password);
             }
         });
 
