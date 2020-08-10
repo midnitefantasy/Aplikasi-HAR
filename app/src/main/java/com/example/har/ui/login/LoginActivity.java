@@ -17,6 +17,7 @@ import com.example.har.MainActivity;
 import com.example.har.Model.LoginModel;
 import com.example.har.PrefConfig;
 import com.example.har.R;
+import com.example.har.forgetPassword;
 import com.example.har.signup;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     EditText mPassword, mEmail;
-    TextView btnSignUp;
+    TextView btnSignUp, btnLupaPassword;
     Button btnLogin;
     //final String loginURL = "http://192.168.100.21/HAR/login.php";
 
@@ -51,10 +52,14 @@ public class LoginActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.password);
         btnLogin = (Button)findViewById(R.id.btnLogin);
         btnSignUp = (TextView)findViewById(R.id.btnSignUp);
+        btnLupaPassword = (TextView)findViewById(R.id.btnSignUp);
         btnSignUp.setClickable(true);
         btnLogin.setClickable(true);
-        btnSignUp.setClickable(true);
+        btnLupaPassword.setClickable(true);
         btnLogin.setEnabled(true);
+        btnSignUp.setEnabled(true);
+        btnLupaPassword.setEnabled(true);
+
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -87,7 +92,6 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
-                //loginUser(email, password);
             }
         });
 
@@ -98,43 +102,13 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-    private void loginUser(String mEmail, String mPassword){
-        APIRequestData api = retroserver.connectRetrofit().create(APIRequestData.class);
-        Call<LoginModel> call = api.login(mEmail, mPassword);
-        call.enqueue(new Callback<LoginModel>() {
+
+        btnLupaPassword.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
-
-                int isSuccess = response.body().getIsSuccess();
-                if (response.isSuccessful()) {
-                    //Toast.makeText(getApplicationContext(), isSucess, MainActivity.class);
-                    if (isSuccess == 1) {
-                        //get email
-                        String email = response.body().getEmail();
-                        //storing nama di PrefShared
-                        PrefConfig.getInstance(LoginActivity.this).storeEmail(email);
-                        Toast.makeText(getApplicationContext(), response.body().getEmail(), Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), Home.class);
-                        startActivity(intent);
-                    } else {
-                        Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(intent);
-                    }
-                } else{
-                    Toast.makeText(getApplicationContext(), "Some ERROR occured", Toast.LENGTH_LONG).show();
-                }
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), forgetPassword.class);
+                startActivity(intent);
             }
-
-            @Override
-            public void onFailure(Call<LoginModel> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-            }
-
         });
-
-        }
-       // mLoginFormView = findViewById(R.id.login);
-    // mProgressView = findViewById(R.id.login_progress);
     }
+}
