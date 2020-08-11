@@ -10,11 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".forgetPassword2"></activity>
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".forgetPassword2" />
         <activity android:name=".signup" />
         <activity android:name=".forgetPassword" />
-        <activity android:name=".ui.login.LoginActivity"></activity>
-        <activity android:name=".Home"></activity>
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".Home" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

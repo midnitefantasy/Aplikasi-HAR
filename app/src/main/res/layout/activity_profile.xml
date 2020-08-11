@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="744dp"
+        app:srcCompat="@drawable/bgradient"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-7dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="173dp"
+        android:layout_height="156dp"
+        app:srcCompat="@drawable/profile"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:text="Nama Lengkap"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat Email User"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <TextView
+        android:id="@+id/umur"
+        android:layout_width="51dp"
+        android:layout_height="22dp"
+        android:text="Umur:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="354dp" />
+
+    <TextView
+        android:id="@+id/bb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berat:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <TextView
+        android:id="@+id/tb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tinggi:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="354dp" />
+
+    <TextView
+        android:id="@+id/JK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <TextView
+        android:id="@+id/btnEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EDIT PROFILE:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="454dp" />
+
+    <TextView
+        android:id="@+id/btnHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HISTORY:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="495dp" />
+
+    <TextView
+        android:id="@+id/btnLogOut"
+        android:layout_width="51dp"
+        android:layout_height="10dp"
+        android:text="LOG OUT:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="536dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
