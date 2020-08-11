@@ -7,6 +7,38 @@
     android:background="@drawable/bgwhite"
     tools:context=".signup">
 
+    <Button
+        android:id="@+id/btnSign"
+        android:layout_width="328dp"
+        android:layout_height="50dp"
+        android:layout_gravity="start"
+        android:layout_marginBottom="67dp"
+        android:layout_marginTop="598dp"
+        android:background="@drawable/buttonframedark"
+        android:enabled="false"
+        android:fontFamily="@font/ralewayregular"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="680dp"
+        android:layout_marginEnd="361dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/nama"
         android:layout_width="166dp"
@@ -37,7 +69,7 @@
         android:layout_marginBottom="510dp"
         android:layout_marginEnd="47dp"
         android:layout_marginStart="198dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="183dp"
         android:backgroundTint="@color/grey"
         android:hint="Email"
         android:imeActionLabel="@string/action_sign_in_short"
@@ -50,7 +82,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nama" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/password"
@@ -147,23 +179,6 @@
         app:layout_constraintTop_toBottomOf="@+id/bb"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/SignUp"
-        android:layout_width="328dp"
-        android:layout_height="50dp"
-        android:layout_gravity="start"
-        android:layout_marginBottom="67dp"
-        android:layout_marginTop="598dp"
-        android:background="@drawable/buttonframedark"
-        android:enabled="false"
-        android:fontFamily="@font/ralewayregular"
-        android:text="Sign Up"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
     <Spinner
         android:id="@+id/jeniskelamin"
         android:layout_width="162dp"

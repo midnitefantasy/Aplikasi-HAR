@@ -6,15 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class signup extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    Button btnSignUp,btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+        btnSignUp = (Button)findViewById(R.id.btnSign);
+        btnBack = (Button)findViewById(R.id.btnBack);
         Spinner spin = (Spinner) findViewById(R.id.jeniskelamin);
         spin.setOnItemSelectedListener(this);
         String[] jk = {"Pilih", "Laki-laki", "Perempuan"};

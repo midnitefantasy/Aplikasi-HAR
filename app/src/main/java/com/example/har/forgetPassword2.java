@@ -18,6 +18,7 @@ public class forgetPassword2 extends AppCompatActivity {
         setContentView(R.layout.activity_forget_password2);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnLogin.setClickable(true);
+        btnLogin.setEnabled(true);
         btnLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

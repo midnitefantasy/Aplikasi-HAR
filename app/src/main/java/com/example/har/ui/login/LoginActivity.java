@@ -4,18 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.har.API.APIRequestData;
-import com.example.har.API.retroserver;
 import com.example.har.Home;
-import com.example.har.MainActivity;
-import com.example.har.Model.LoginModel;
-import com.example.har.PrefConfig;
 import com.example.har.R;
 import com.example.har.forgetPassword;
 import com.example.har.signup;
@@ -26,11 +20,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-import static android.Manifest.permission.READ_CONTACTS;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -52,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.password);
         btnLogin = (Button)findViewById(R.id.btnLogin);
         btnSignUp = (TextView)findViewById(R.id.btnSignUp);
-        btnLupaPassword = (TextView)findViewById(R.id.btnSignUp);
+        btnLupaPassword = (TextView)findViewById(R.id.btnLupaPassword);
         btnSignUp.setClickable(true);
         btnLogin.setClickable(true);
         btnLupaPassword.setClickable(true);
@@ -97,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
 
         btnSignUp.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v){
+            public void onClick(View view2){
                 Intent intent = new Intent(getApplicationContext(), signup.class);
                 startActivity(intent);
             }
@@ -105,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
 
         btnLupaPassword.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v){
+            public void onClick(View view3){
                 Intent intent = new Intent(getApplicationContext(), forgetPassword.class);
                 startActivity(intent);
             }
