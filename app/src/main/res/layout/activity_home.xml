@@ -8,7 +8,7 @@
     tools:context=".Home">
 
     <Button
-        android:id="@+id/eksperimen"
+        android:id="@+id/btnEksperimen"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginBottom="200dp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnRekam"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginBottom="75dp"
@@ -41,7 +41,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnPilihAkt"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginBottom="137dp"
@@ -56,35 +56,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/menuProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="678dp"
-        android:layout_marginEnd="359dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="26dp"
+    <Button
+        android:id="@+id/btnProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="673dp"
+        android:layout_marginEnd="306dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profile" />
-
-    <TextView
-        android:id="@+id/hi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="681dp"
-        android:layout_marginTop="26dp"
-        android:fontFamily="@font/ralewayextrabold"
-        android:text="Hi,"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/nama"
@@ -137,6 +123,22 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="681dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/ralewayextrabold"
+        android:text="Hi,"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

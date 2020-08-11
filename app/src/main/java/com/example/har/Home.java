@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Home extends AppCompatActivity {
     TextView nama;
+    ImageView profil;
     private FirebaseAuth mAuth;
    // @Override
     //public onStart(){
