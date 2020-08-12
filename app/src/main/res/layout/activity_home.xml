@@ -11,74 +11,69 @@
         android:id="@+id/btnEksperimen"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="200dp"
         android:layout_marginTop="481dp"
+        android:layout_marginBottom="200dp"
         android:background="@drawable/buttonframe"
         android:fontFamily="@font/ralewaybold"
         android:text="Eksperimen"
         android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnRekam"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="75dp"
         android:layout_marginTop="606dp"
+        android:layout_marginBottom="75dp"
         android:background="@drawable/buttonframe"
         android:fontFamily="@font/ralewaybold"
         android:text="Rekam Aktivitas"
         android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnPilihAkt"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="137dp"
         android:layout_marginTop="544dp"
+        android:layout_marginBottom="137dp"
         android:background="@drawable/buttonframe"
         android:fontFamily="@font/ralewaybold"
         android:text="Pilih Aktivitas"
         android:textSize="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnRekam"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEksperimen"
+        app:layout_constraintVertical_bias="0.81" />
 
     <Button
         android:id="@+id/btnProfile"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="673dp"
-        android:layout_marginEnd="306dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/nama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="681dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="26dp"
+        android:layout_width="53dp"
+        android:layout_height="22dp"
         android:fontFamily="@font/ralewayextrabold"
         android:text="@string/user"
         android:textAlignment="textStart"
@@ -86,37 +81,15 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toEndOf="@+id/hi"
+        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/aktivitasTerakhir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="576dp"
-        android:layout_marginEnd="122dp"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="131dp"
-        android:fontFamily="@font/ralewayextrabold"
-        android:text="Aktivitas Terakhir"
-        android:textAlignment="center"
-        android:textColor="@color/darkgrey"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
 
     <TextView
         android:id="@+id/namaAktivitas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="340dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="367dp"
         android:fontFamily="@font/ralewaymedium"
         android:text="Berlari"
         android:textAlignment="center"
@@ -124,21 +97,38 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <TextView
+        android:id="@+id/aktivitasTerakhir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ralewayextrabold"
+        android:text="Aktivitas Terakhir"
+        android:textAlignment="center"
+        android:textColor="@color/darkgrey"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
 
     <TextView
         android:id="@+id/hi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="681dp"
-        android:layout_marginTop="26dp"
         android:fontFamily="@font/ralewayextrabold"
         android:text="Hi,"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
