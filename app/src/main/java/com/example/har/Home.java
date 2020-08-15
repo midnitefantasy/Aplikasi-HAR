@@ -17,15 +17,7 @@ public class Home extends AppCompatActivity {
     Button btnProfile;
     private FirebaseAuth mAuth;
 
-    // @Override
-    //public onStart(){
-    //   super.onStart();
-    //  FirebaseUser currentUser = mAuth.getCurrentUser();
-    //  if(!FirebaseUser currentUser.isEmailVerified()){
-    //      startActivity(new Intent(this, MainActivity.class));
-    //      finish();
-    //  }
-    // }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

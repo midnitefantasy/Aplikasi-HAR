@@ -48,10 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setEnabled(true);
         btnSignUp.setEnabled(true);
         btnLupaPassword.setEnabled(true);
-
         mAuth = FirebaseAuth.getInstance();
-
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

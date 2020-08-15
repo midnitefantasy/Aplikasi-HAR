@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class forgetPassword extends AppCompatActivity {
+    private FirebaseAuth fAuth;
     Button btnResetPassword;
     TextView btnSignUp;
     EditText mEmail;
@@ -32,12 +33,13 @@ public class forgetPassword extends AppCompatActivity {
         btnResetPassword.setEnabled(true);
         btnSignUp.setClickable(true);
         btnSignUp.setEnabled(true);
+        fAuth = FirebaseAuth.getInstance();
 
         btnResetPassword.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 final String email = mEmail.getText().toString();
-                FirebaseAuth.getInstance().sendPasswordResetEmail(email)
+                fAuth.sendPasswordResetEmail(email)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
