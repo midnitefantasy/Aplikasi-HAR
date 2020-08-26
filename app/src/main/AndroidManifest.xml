@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Profile"></activity>
+        <activity android:name=".eskperimen"></activity>
+        <activity android:name=".Profile" />
         <activity android:name=".forgetPassword2" />
         <activity android:name=".signup" />
         <activity android:name=".forgetPassword" />
