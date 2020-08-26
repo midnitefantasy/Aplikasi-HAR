@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Home extends AppCompatActivity {
     TextView nama;
-    Button btnProfile;
+    Button btnProfile, btnEksperimen;
     private FirebaseAuth mAuth;
 
 
@@ -24,13 +24,24 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         nama = findViewById(R.id.nama);
         btnProfile = findViewById(R.id.btnProfile);
+        btnEksperimen = findViewById(R.id.btnEksperimen);
+
         btnProfile.setClickable(true);
         btnProfile.setEnabled(true);
+        btnEksperimen.setClickable(true);
+        btnEksperimen.setEnabled(true);
 
         btnProfile.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View v){
                 startActivity(new Intent(getApplicationContext(), Profile.class));
+            }
+        });
+
+        btnEksperimen.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), eskperimen.class));
             }
         });
 
