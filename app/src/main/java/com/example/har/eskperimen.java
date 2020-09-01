@@ -36,7 +36,7 @@ public class eskperimen extends AppCompatActivity implements SensorEventListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_eskperimen);
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);

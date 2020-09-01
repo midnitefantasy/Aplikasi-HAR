@@ -18,9 +18,12 @@
         android:id="@+id/imageView3"
         android:layout_width="173dp"
         android:layout_height="156dp"
-        app:srcCompat="@drawable/profile"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="81dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137"
+        app:srcCompat="@drawable/profile" />
 
     <TextView
         android:id="@+id/nama"
@@ -29,8 +32,12 @@
         android:backgroundTint="#FFFFFF"
         android:text="Nama Lengkap"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="257dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362" />
 
     <TextView
         android:id="@+id/email"
@@ -38,8 +45,11 @@
         android:layout_height="wrap_content"
         android:text="Alamat Email User"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="286dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
 
     <TextView
         android:id="@+id/umur"
@@ -47,8 +57,12 @@
         android:layout_height="22dp"
         android:text="Umur:"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="354dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
     <TextView
         android:id="@+id/bb"
@@ -56,8 +70,12 @@
         android:layout_height="wrap_content"
         android:text="Berat:"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="394dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.553" />
 
     <TextView
         android:id="@+id/tb"
@@ -65,8 +83,12 @@
         android:layout_height="wrap_content"
         android:text="Tinggi:"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="354dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
 
     <TextView
         android:id="@+id/JK"
@@ -74,8 +96,12 @@
         android:layout_height="wrap_content"
         android:text="Jenis Kelamin:"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="394dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.553" />
 
     <TextView
         android:id="@+id/btnEditProfile"
@@ -83,8 +109,11 @@
         android:layout_height="wrap_content"
         android:text="EDIT PROFILE:"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="454dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.636" />
 
     <TextView
         android:id="@+id/btnHistory"
@@ -92,15 +121,22 @@
         android:layout_height="wrap_content"
         android:text="HISTORY:"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="495dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689" />
 
     <TextView
         android:id="@+id/btnLogOut"
-        android:layout_width="51dp"
-        android:layout_height="10dp"
+        android:layout_width="63dp"
+        android:layout_height="24dp"
         android:text="LOG OUT:"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="536dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751" />
 </androidx.constraintlayout.widget.ConstraintLayout>
