@@ -9,10 +9,130 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:padding="40dp"
+        android:orientation="vertical"
         android:background="@drawable/bgwhite"
+        android:padding="40dp"
         tools:context=".Rekam_2">
+
+        <TextView
+            android:id="@+id/aMag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="747dp" />
+
+        <TextView
+            android:id="@+id/bMag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="778dp" />
+
+        <TextView
+            android:id="@+id/cMag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="162dp"
+            tools:layout_editor_absoluteY="818dp" />
+
+        <TextView
+            android:id="@+id/xMag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="750dp" />
+
+        <TextView
+            android:id="@+id/yMag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="781dp" />
+
+        <TextView
+            android:id="@+id/zMag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="821dp" />
+
+        <TextView
+            android:id="@+id/xAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="470dp" />
+
+        <TextView
+            android:id="@+id/yAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="501dp" />
+
+        <TextView
+            android:id="@+id/zAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="29dp"
+            tools:layout_editor_absoluteY="531dp" />
+
+        <TextView
+            android:id="@+id/xGyr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="613dp" />
+
+        <TextView
+            android:id="@+id/yGyr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="644dp" />
+
+        <TextView
+            android:id="@+id/zGyr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="29dp"
+            tools:layout_editor_absoluteY="684dp" />
+
+        <Button
+            android:id="@+id/btnMulai"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="85dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="924dp"
+            android:backgroundTint="#31D4B8"
+            android:text="Mulai Aktifitas"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/profile"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="2dp" />
 
         <TextView
             android:id="@+id/nama3"
@@ -36,15 +156,6 @@
             android:textSize="20dp"
             tools:layout_editor_absoluteX="116dp"
             tools:layout_editor_absoluteY="5dp" />
-
-        <com.github.mikephil.charting.charts.LineChart
-            android:id="@+id/grafikeksperimen"
-            android:layout_width="291dp"
-            android:layout_height="266dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
         <TextView
             android:id="@+id/textView17"
@@ -78,6 +189,14 @@
             android:text="x:"
             app:layout_constraintTop_toBottomOf="@+id/textView18"
             tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/yAcc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="501dp" />
 
         <TextView
             android:id="@+id/textView21"
@@ -199,23 +318,14 @@
             tools:layout_editor_absoluteX="130dp"
             tools:layout_editor_absoluteY="814dp" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="170dp"
-            android:layout_height="37dp"
-            android:backgroundTint="#31D4B8"
-            android:text="Mulai Aktifitas"
-            android:textColor="#FFFFFF"
-            tools:layout_editor_absoluteX="76dp"
-            tools:layout_editor_absoluteY="884dp" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/profile"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="2dp" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/grafikeksperimen"
+            android:layout_width="291dp"
+            android:layout_height="266dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

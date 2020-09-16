@@ -10,6 +10,9 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
@@ -20,6 +23,8 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +32,9 @@ public class eskperimen extends AppCompatActivity implements SensorEventListener
     private static final String TAG = "eksperimen";
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
-    private Sensor sensors;
+    private SensorEvent sensors;
+    private Button btnMulai;
+    private TextView xAcc, yAcc, zAcc, xGyr, yGyr, zGyr, xMag, yMag, zMag, aMag, bMag, cMag;
 
     private LineChart mChart;
     private Thread thread;
@@ -36,23 +43,30 @@ public class eskperimen extends AppCompatActivity implements SensorEventListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eskperimen);
-        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        setContentView(R.layout.activity_rekam_2);
+        btnMulai = (Button) findViewById(R.id.btnMulai);
+        btnMulai.setEnabled(true);
+        btnMulai.setClickable(true);
+        xAcc = (TextView) findViewById((R.id.xAcc));
+        yAcc = (TextView) findViewById((R.id.yAcc));
+        zAcc = (TextView) findViewById((R.id.zAcc));
+        xGyr = (TextView) findViewById((R.id.xGyr));
+        yGyr = (TextView) findViewById((R.id.yGyr));
+        zGyr = (TextView) findViewById((R.id.zGyr));
+        xMag = (TextView) findViewById((R.id.xMag));
+        yMag = (TextView) findViewById((R.id.yMag));
+        zMag = (TextView) findViewById((R.id.zMag));
+        aMag = (TextView) findViewById((R.id.aMag));
+        bMag = (TextView) findViewById((R.id.bMag));
+        cMag = (TextView) findViewById((R.id.cMag));
 
+
+
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
 
         List<Sensor> sensors = mSensorManager.getSensorList(Sensor.TYPE_ALL);
-
-        for(int i=0; i<sensors.size(); i++){
-            Log.d(TAG, "onCreate: Sensor "+ i + ": " + sensors.get(i).toString());
-        }
-
-        if (mAccelerometer != null) {
-            mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_GAME);
-        }
-
         mChart = (LineChart) findViewById(R.id.grafikeksperimen);
-
         // enable description text
         mChart.getDescription().setEnabled(true);
 
@@ -69,41 +83,55 @@ public class eskperimen extends AppCompatActivity implements SensorEventListener
 
         // set an alternative background color
         mChart.setBackgroundColor(Color.WHITE);
+        for(int i=0; i<sensors.size(); i++){
+            Log.d(TAG, "onCreate: Sensor "+ i + ": " + sensors.get(i).toString());
+        }
 
-        LineData data = new LineData();
-        data.setValueTextColor(Color.WHITE);
+        if (mAccelerometer != null) {
+            mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_GAME);
+        }
 
-        // add empty data
-        mChart.setData(data);
+        btnMulai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        // get the legend (only possible after setting data)
-        Legend l = mChart.getLegend();
+                LineData data = new LineData();
+                data.setValueTextColor(Color.WHITE);
 
-        // modify the legend ...
-        l.setForm(Legend.LegendForm.LINE);
-        l.setTextColor(Color.WHITE);
+                // add empty data
+                mChart.setData(data);
 
-        XAxis xl = mChart.getXAxis();
-        xl.setTextColor(Color.WHITE);
-        xl.setDrawGridLines(true);
-        xl.setAvoidFirstLastClipping(true);
-        xl.setEnabled(true);
+                // get the legend (only possible after setting data)
+                Legend l = mChart.getLegend();
 
-        YAxis leftAxis = mChart.getAxisLeft();
-        leftAxis.setTextColor(Color.WHITE);
-        leftAxis.setDrawGridLines(false);
-        leftAxis.setAxisMaximum(10f);
-        leftAxis.setAxisMinimum(0f);
-        leftAxis.setDrawGridLines(true);
+                // modify the legend ...
+                l.setForm(Legend.LegendForm.LINE);
+                l.setTextColor(Color.WHITE);
 
-        YAxis rightAxis = mChart.getAxisRight();
-        rightAxis.setEnabled(false);
+                XAxis xl = mChart.getXAxis();
+                xl.setTextColor(Color.WHITE);
+                xl.setDrawGridLines(true);
+                xl.setAvoidFirstLastClipping(true);
+                xl.setEnabled(true);
 
-        mChart.getAxisLeft().setDrawGridLines(false);
-        mChart.getXAxis().setDrawGridLines(false);
-        mChart.setDrawBorders(false);
+                YAxis leftAxis = mChart.getAxisLeft();
+                leftAxis.setTextColor(Color.WHITE);
+                leftAxis.setDrawGridLines(false);
+                leftAxis.setAxisMaximum(10f);
+                leftAxis.setAxisMinimum(0f);
+                leftAxis.setDrawGridLines(true);
 
-        feedMultiple();
+                YAxis rightAxis = mChart.getAxisRight();
+                rightAxis.setEnabled(false);
+
+                mChart.getAxisLeft().setDrawGridLines(false);
+                mChart.getXAxis().setDrawGridLines(false);
+                mChart.setDrawBorders(false);
+
+                feedMultiple();
+                btnMulai.setText("Finish");
+            }
+        });
 
     }
 
@@ -195,10 +223,13 @@ public class eskperimen extends AppCompatActivity implements SensorEventListener
 
     @Override
     public final void onSensorChanged(SensorEvent event) {
-        if(plotData){
+        /*if(plotData){
             addEntry(event);
             plotData = false;
-        }
+        }*/
+        xAcc.setText((int) event.values[0]);
+        yAcc.setText((int) event.values[1]);
+        zAcc.setText((int) event.values[2]);
     }
 
 
