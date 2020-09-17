@@ -9,10 +9,40 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@drawable/bgwhite"
+        android:orientation="vertical"
         android:padding="40dp"
         tools:context=".Rekam_2">
+
+        <Button
+            android:id="@+id/btnMulai"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="924dp"
+            android:layout_marginEnd="85dp"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="#31D4B8"
+            android:text="Mulai Aktifitas"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/xMag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.028"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/profile" />
 
         <TextView
             android:id="@+id/aMag"
@@ -110,52 +140,38 @@
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="684dp" />
 
-        <Button
-            android:id="@+id/btnMulai"
-            android:layout_width="170dp"
-            android:layout_height="37dp"
-            android:layout_marginBottom="40dp"
-            android:layout_marginEnd="85dp"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="924dp"
-            android:backgroundTint="#31D4B8"
-            android:text="Mulai Aktifitas"
-            android:textColor="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/profile"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="2dp" />
-
         <TextView
             android:id="@+id/nama3"
             android:layout_width="53dp"
             android:layout_height="22dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/ralewayextrabold"
             android:text="@string/user"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:layout_editor_absoluteX="147dp"
-            tools:layout_editor_absoluteY="7dp" />
+            app:layout_constraintBottom_toTopOf="@+id/textView31"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.525"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.002" />
 
         <TextView
             android:id="@+id/hi3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/ralewayextrabold"
             android:text="Hi,"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:layout_editor_absoluteX="116dp"
-            tools:layout_editor_absoluteY="5dp" />
+            app:layout_constraintBottom_toTopOf="@+id/textView31"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.374"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView17"
@@ -164,10 +180,12 @@
             android:layout_marginTop="68dp"
             android:text="Sensor Reader"
             android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView31"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintHorizontal_bias="0.445"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.018" />
 
         <TextView
             android:id="@+id/textView18"
@@ -322,10 +340,10 @@
             android:id="@+id/grafikeksperimen"
             android:layout_width="291dp"
             android:layout_height="266dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="140dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
